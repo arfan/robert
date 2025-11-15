@@ -1,0 +1,29 @@
+DBABABABABABABABABABABABA
+C*.o.o.o.o.ooo.o.o.o.o.*D
+D.*...*.*.*.*.*.*.*...*.C
+Co.*o.o.o.o.o.o.o.o.o*.oD
+D..o*...*.*.*.*.*...*o..C
+Co...*.............*...oD
+D.*o..*...*.*.*...*..o*.C
+Co.....*o.o.o.o.o*.....oD
+D.*o*..o*..***..*o..*o*.C
+Co.......*.....*.......oD
+D.*o*.*o..*...*..o*.*o*oC
+Co......*..*o*..*......oD
+Do*o*.*o*..ouo..*o*.*o*.C
+Co......*..*o*..*......oD
+D..o*.*o..*...*..o*.*o*.C
+Co.......*.....*.......oD
+D.*o*..o*..***..*o..*o*.C
+Co.....*o.o.o.o.o*.....oD
+D.*o..*...*.*.*...*..o*.C
+Co...*.............*...oD
+D..o*...*.*.*.*.*...*o..C
+Co.*o.o.o.o.o.o.o.oo.*.oD
+D.*...*.*.*.*.*.*.*...*.C
+C*.o.o.o.o.ooo.o.o.o.o.*D
+BABABABABABABABABABABABAC
+
+
+points 400
+maxsize 39

@@ -1,0 +1,29 @@
+o.o.o.o.o.o.o.o.o.o.o.o.o
+.*.*.*.*.*.BEA.*.*.*.*.*.
+o.o.o.o.o.o.o*o.o.o.o.o.o
+.*.*.*.*.BEA.BEA.*.*.*.*.
+o.o.o.o.o.o*..o*o.o.o.o.o
+.*.*.*.BEA.BEA.BEA.*.*.*.
+o.o.o.o.o*..o*..o*o.o.o.o
+.*.*.BEA.BEA.BEA.BEA.*.*.
+o.o.o.o*..o*..o*..o*o.o.o
+.*.BEA.BEA.BEA.BEA.BEA.*.
+o.o.o*..o*..o*..o*..o*o.o
+.BEA.BEA.BEA.BEA.BEA.BEA.
+u*..o*..o*..o*..o*..o*..o
+.BEA.BEA.BEA.BEA.BEA.BEA.
+o.o.o*..o...o*..o*..o*o.o
+.*.BEA.BEA.BEA.BEA.BEA.*.
+o.o.o.o*..o*..o*..o*o.o.o
+.*.*.BEA.BEA.BEA.BEA.*.*.
+o.o.o.o.o*..o*..o*o.o.o.o
+.*.*.*.BEA.BEA.BEA.*.*.*.
+o.o.o.o.o.o*..o*o.o.o.o.o
+.*.*.*.*.BEA.BEA.*.*.*.*.
+o.o.o.o.o.o.o*..o.o.o.o.o
+.*.*.*.*.*.BEA.*.*.*.*.*.
+o.o.o.o.o.o.o.o.o.o.o.o.o
+
+
+points 800
+maxsize 23

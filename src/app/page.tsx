@@ -11,41 +11,58 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isStopping, setIsStopping] = useState(false);
   const [animationSpeed, setAnimationSpeed] = useState(100);
-  const [selectedLevel, setSelectedLevel] = useState(1);
+  const [selectedPack, setSelectedPack] = useState('level_pack1');
+  const [selectedLevel, setSelectedLevel] = useState(2);
   const [levelData, setLevelData] = useState<string>('');
-  const previousLevelRef = useRef(1);
+  const previousLevelRef = useRef(2);
+  const previousPackRef = useRef('level_pack1');
   const isStoppingRef = useRef(false);
+
+  // Define available levels for each pack
+  const levelPacks: Record<string, number[]> = {
+    'level_pack1': [2, 3, 4, 5, 6, 7, 18, 19, 20],
+    'level_pack2': [2, 3, 4, 5, 6, 7, 8, 25],
+    'level_pack3': [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+    'level_pack4': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+  };
 
   // Load the selected level and its saved solution
   useEffect(() => {
     const loadLevel = async () => {
       try {
-        const response = await fetch(`/level${selectedLevel}.txt`);
+        const response = await fetch(`/${selectedPack}/level${selectedLevel}.txt`);
         const data = await response.text();
         setLevelData(data);
         const initialState = initializeGame(data);
         setGameState(initialState);
         
         // Load saved solution from localStorage
-        const savedSolution = localStorage.getItem(`level${selectedLevel}_solution`);
+        const savedSolution = localStorage.getItem(`${selectedPack}_level${selectedLevel}_solution`);
         setCommands(savedSolution || '');
         
-        // Update the previous level ref
+        // Update the previous level and pack refs
         previousLevelRef.current = selectedLevel;
+        previousPackRef.current = selectedPack;
       } catch (error) {
         console.error('Failed to load level:', error);
       }
     };
     loadLevel();
-  }, [selectedLevel]);
+  }, [selectedLevel, selectedPack]);
 
   // Save solution to localStorage whenever commands change (but not when level changes)
   useEffect(() => {
-    // Only save if we're on the same level (not during level switch)
-    if (previousLevelRef.current === selectedLevel) {
-      localStorage.setItem(`level${selectedLevel}_solution`, commands);
+    // Only save if we're on the same level and pack (not during level switch)
+    if (previousLevelRef.current === selectedLevel && previousPackRef.current === selectedPack) {
+      localStorage.setItem(`${selectedPack}_level${selectedLevel}_solution`, commands);
     }
-  }, [commands, selectedLevel]);
+  }, [commands, selectedLevel, selectedPack]);
+
+  // Reset to first level when pack changes
+  useEffect(() => {
+    const firstLevel = levelPacks[selectedPack]?.[0] || 1;
+    setSelectedLevel(firstLevel);
+  }, [selectedPack]);
 
   // Calculate byte size of solution
   const calculateBytes = (text: string): number => {
@@ -128,11 +145,31 @@ export default function Home() {
           Navigate the robot to collect all points without hitting bombs!
         </p>
 
-        {/* Level Selector */}
-        <div className="flex justify-center mb-8">
+        {/* Level Pack and Level Selector */}
+        <div className="flex justify-center mb-8 gap-4">
+          {/* Pack Selector */}
+          <div className="bg-white rounded-lg shadow-md p-4 inline-flex gap-2 items-center">
+            <label htmlFor="pack-select" className="text-gray-700 font-semibold">
+              Pack:
+            </label>
+            <select
+              id="pack-select"
+              value={selectedPack}
+              onChange={(e) => setSelectedPack(e.target.value)}
+              disabled={isPlaying}
+              className="px-4 py-2 rounded-lg border-2 border-gray-300 bg-white text-gray-700 font-semibold focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+            >
+              <option value="level_pack1">Pack 1</option>
+              <option value="level_pack2">Pack 2</option>
+              <option value="level_pack3">Pack 3</option>
+              <option value="level_pack4">Pack 4</option>
+            </select>
+          </div>
+
+          {/* Level Selector */}
           <div className="bg-white rounded-lg shadow-md p-4 inline-flex gap-2 items-center">
             <label htmlFor="level-select" className="text-gray-700 font-semibold">
-              Select Level:
+              Level:
             </label>
             <select
               id="level-select"
@@ -141,16 +178,9 @@ export default function Home() {
               disabled={isPlaying}
               className="px-4 py-2 rounded-lg border-2 border-gray-300 bg-white text-gray-700 font-semibold focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             >
-              <option value={1}>Level 1</option>
-              <option value={2}>Level 2</option>
-              <option value={3}>Level 3</option>
-              <option value={4}>Level 4</option>
-              <option value={5}>Level 5</option>
-              <option value={6}>Level 6</option>
-              <option value={7}>Level 7</option>
-              <option value={18}>Level 18</option>
-              <option value={19}>Level 19</option>
-              <option value={20}>Level 20</option>
+              {levelPacks[selectedPack]?.map(level => (
+                <option key={level} value={level}>Level {level}</option>
+              ))}
             </select>
           </div>
         </div>

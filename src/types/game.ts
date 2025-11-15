@@ -1,4 +1,4 @@
-export type CellType = '.' | '*' | 'o' | 'u';
+export type CellType = '.' | '*' | 'o' | 'u' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K';
 
 export type Direction = 'up' | 'down' | 'left' | 'right';
 

@@ -15,6 +15,10 @@ const directionRotation: Record<Direction, number> = {
 };
 
 export default function Grid({ grid, robotPosition, robotDirection }: GridProps) {
+  const isWall = (cellType: CellType): boolean => {
+    return /^[A-K]$/.test(cellType);
+  };
+
   const getCellContent = (cellType: CellType, x: number, y: number) => {
     const isRobotHere = robotPosition.x === x && robotPosition.y === y;
 
@@ -32,6 +36,15 @@ export default function Grid({ grid, robotPosition, robotDirection }: GridProps)
             }}
             className="object-contain"
           />
+        </div>
+      );
+    }
+
+    // Wall characters (A-K) - show as solid blocks
+    if (isWall(cellType)) {
+      return (
+        <div className="w-full h-full flex items-center justify-center text-xl">
+          🪨
         </div>
       );
     }
@@ -63,6 +76,8 @@ export default function Grid({ grid, robotPosition, robotDirection }: GridProps)
       bgColor = 'bg-blue-100';
     } else if (cellType === '*') {
       bgColor = 'bg-red-50';
+    } else if (isWall(cellType)) {
+      bgColor = 'bg-gray-400';
     }
 
     return `${bgColor} border border-gray-300 transition-all duration-300`;

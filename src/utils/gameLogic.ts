@@ -206,6 +206,11 @@ export function* executeCommandsStepByStep(
   return currentState;
 }
 
+// Helper function to check if a cell is a wall (uppercase letters)
+function isWall(cellType: CellType): boolean {
+  return /^[A-K]$/.test(cellType);
+}
+
 // Execute a single command and update the game state
 function executeOneCommand(command: Command, state: GameState): void {
   if (state.isGameOver) return;
@@ -224,6 +229,12 @@ function executeOneCommand(command: Command, state: GameState): void {
     }
 
     const cellType = state.grid[nextPos.y][nextPos.x];
+
+    // Check for non-destructive walls (uppercase letters)
+    if (isWall(cellType)) {
+      // Robot stays in place, continue execution
+      return;
+    }
 
     if (cellType === '*') {
       state.robot.position = nextPos;

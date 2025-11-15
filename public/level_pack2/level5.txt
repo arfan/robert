@@ -1,0 +1,29 @@
+.o...o.D.o.D.o.D.o.D.o.Do
+..oooD.F.D.F.D.F.D.F.D.F.
+****.C.F.F.F.F.F.F.F.F.F.
+ooo*...F.F.F.F.F.F.F.F.F.
+.D.....C.F.F.F.F.F.F.F.F.
+.F...*oooF.F.F.F.F.F.F.F.
+.F.D*****C.F.F.F.F.F.F.F.
+.F.Fooo*...F.F.F.F.F.F.F.
+.F.F.D.....C.F.F.F.F.F.F.
+.F.F.F...*oooF.F.F.F.F.F.
+.F.F.F.D*****C.F.F.F.F.F.
+.F.F.F.Fooo*...F.F.F.F.F.
+.F.F.F.F.D.....C.F.F.F.F.
+.F.F.F.F.F...*oooF.F.F.F.
+.F.F.F.F.F.D*****C.F.F.F.
+.F.F.F.F.F.Fooo*...F.F.F.
+.F.F.F.F.F.F.D.....C.F.F.
+.F.F.F.F.F.F.F...*oooF.F.
+.F.F.F.F.F.F.F.D*****C.F.
+.F.F.F.F.F.F.F.Fooo*...F.
+.F.F.F.F.F.F.F.F.D.....C.
+.F.F.F.F.F.F.F.F.F...*ooo
+.F.F.F.F.F.F.F.F.F.D****.
+.F.C.F.C.F.C.F.C.F.Cooo..
+uC.o.C.o.C.o.C.o.C.o...o.
+
+
+points 300
+maxsize 35

@@ -1,0 +1,29 @@
+JEEEA*o*BEEEEEEEEEEEEEEEH
+FJEA*.o.*BEEEA***o*o*BEHF
+FF.*.oDo.*...*o..o...*.FF
+FC*.o*C*o.*.*.o.o*o.o.*CF
+F*.oBA*BAo.*.oDo.o.oDo.*C
+Fo..o*D*o...oBOAo.o*C*o.*
+F*.o.oCo.o...oCo.oBA*BAo.
+Foo*o.o.oDo...o.o.o*D*o.*
+F*.o.o.oBOAo...oDo.oCo.*D
+F*..oDo.oCo...oBOAo.o.*DF
+F*ooBOAo.o.o.o.oCo...*.FF
+FD*.oCo...o.o.o.o...*..FF
+FF.*.o....uooo.....o.*.FF
+FF..*...o.o.o.o...oDo.*CF
+FF.*...oDo.o.o.o.oBOAoo*F
+FC*.o.oBOAo...oDo.oCo..*F
+C*.oDo.oCo...oBOAo.o.o.*F
+*.o*C*o.o.o...oCo.o.o*ooF
+ooBA*BAo.oDo...o.oDo.o.*F
+*.o*D*o.oBOAo...o*C*o..oF
+D*.oCo.o.oCo.*.oBA*BAo.*F
+FD*.o.o*o.o.*.*.o*D*o.*DF
+FF.*...o..o*...*.oCo.*.FF
+FIEA*o*o***BEEEA*.o.*BEGF
+IEEEEEEEEEEEEEEEA*o*BEEEG
+
+
+points 1200
+maxsize 41

@@ -1,0 +1,29 @@
+*************************
+*Du......................
+*FoooooooooooooooooooooDo
+*FoD......*......*.....Fo
+*FoFoooooooooooooooooDoFo
+*FoFoD.*.....*.....*.FoFo
+*FoFoFoooooooooooooDoFoFo
+*FoFoFoD..*.....*..FoFoFo
+*FoFoFoFoooooooooDoFoFoFo
+*FoFoFoFoD...*...FoFoFoFo
+*FoFoFoFoFoooooDoFoFoFoFo
+*FoFoFoFoFoD**oFoFoFoFoFo
+*FoFoFoFoFoFo*oFoFoFoFoFo
+*FoFoFoFoFoCoooFoFoFoFoFo
+*FoFoFoFoFo.*..CoFoFoFoFo
+*FoFoFoFoCoooooooFoFoFoFo
+*FoFoFoFo.*....*.CoFoFoFo
+*FoFoFoCoooooooooooFoFoFo
+*FoFoFo.....*......CoFoFo
+*FoFoCoooooooooooooooFoFo
+*FoFo...*........*...CoFo
+*FoCoooooooooooooooooooFo
+*Fo*........*.........*Co
+*Cooooooooooooooooooooooo
+*************************
+
+
+points 1000
+maxsize 15
