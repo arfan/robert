@@ -333,8 +333,40 @@ export default function Home() {
                   <div>b:la</div>
                   <div>a</div>
                 </div>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-500 mb-3">
                   Functions can call each other: &apos;a&apos; moves and calls &apos;b&apos;, &apos;b&apos; turns left and calls &apos;a&apos; (spiral pattern)
+                </p>
+                
+                <h5 className="font-bold mb-2 text-gray-700 text-sm">Arguments & Expressions:</h5>
+                <p className="text-sm text-gray-600 mb-2">
+                  Use uppercase letters as numeric or instruction arguments:
+                </p>
+                <div className="bg-gray-50 p-3 rounded font-mono text-sm mb-2">
+                  <div>f(A):ssslf(A-1)</div>
+                  <div>f(3)</div>
+                </div>
+                <p className="text-xs text-gray-500 mb-3">
+                  Numeric argument: f(3) expands to sssl + sssl + sssl. When A ≤ 0, recursion stops.
+                </p>
+                
+                <div className="bg-gray-50 p-3 rounded font-mono text-sm mb-2">
+                  <div>f(B):Bf(Bs)</div>
+                  <div>f(lr)</div>
+                </div>
+                <p className="text-xs text-gray-500 mb-3">
+                  Instruction argument: f(lr) expands to lr + lrs + lrss + lrsss... (builds sequence)
+                </p>
+                
+                <div className="bg-gray-50 p-3 rounded font-mono text-sm mb-2">
+                  <div>f(A,B):Arf(sA,B-1)</div>
+                  <div>f(5,l)</div>
+                </div>
+                <p className="text-xs text-gray-500 mb-3">
+                  Mixed arguments: Both numeric (A) and instruction (B) arguments in one function
+                </p>
+                
+                <p className="text-xs text-gray-500 mt-2 italic">
+                  Expressions: A+1, B-2 work with numeric arguments. If numeric arg ≤ 0, the call is skipped.
                 </p>
               </div>
               
